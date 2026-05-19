@@ -9,6 +9,7 @@ using namespace std;
 const string FILE_NAME = "210-final-1-SP26.txt";
 
 int main() {
+    //Milestone 1 code
     map<string, int> airports;
 
     string airport;
@@ -31,5 +32,12 @@ int main() {
     cout << "All airport traffic counts:" << endl;
     for (const auto &pair : airports) {
         cout << pair.first << " " << pair.second << endl;
+    }
+
+    //Milestone 2 code
+    map<string, int> busiest_airports;
+    int tracker = 0;
+    for (const auto &pair : airports) {
+        
     }
 }

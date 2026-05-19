@@ -8,6 +8,8 @@ using namespace std;
 
 const string FILE_NAME = "210-final-1-SP26.txt";
 
+void print_airports_in_range(const map<string, int>&, int, int);
+
 int main() {
     //Milestone 1 code
     map<string, int> airports;
@@ -51,5 +53,15 @@ int main() {
     cout << "\nBusiest airport(s) with count " << tracker << ":" << endl;
     for (const auto &pair : busiest_airports) {
         cout << pair.first << " " << pair.second << endl;
+    }
+
+
+    return 0;
+}
+
+void print_airports_in_range(const map<string, int> &map, int min, int max) {
+    for (const auto &pair : map) {
+        if (pair.second >= min && pair.second <= max)
+            cout << 
     }
 }

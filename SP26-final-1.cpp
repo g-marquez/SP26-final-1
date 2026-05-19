@@ -38,6 +38,18 @@ int main() {
     map<string, int> busiest_airports;
     int tracker = 0;
     for (const auto &pair : airports) {
-        
+        if (pair.second > tracker) {
+            busiest_airports.clear();
+            tracker = pair.second;
+            busiest_airports[pair.first] = pair.second;
+        }
+        else if (pair.second == tracker) {
+            busiest_airports[pair.first] = pair.second;
+        }
+    }
+
+    cout << "\nBusiest airport(s) with count " << tracker << ":" << endl;
+    for (const auto &pair : airports) {
+        cout << pair.first << " " << pair.second << endl;
     }
 }

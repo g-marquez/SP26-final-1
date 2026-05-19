@@ -30,6 +30,6 @@ int main() {
 
     cout << "All airport traffic counts:" << endl;
     for (const auto &pair : airports) {
-        
+        cout << pair.first << " " << pair.second << endl;
     }
 }

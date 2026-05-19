@@ -7,6 +7,7 @@
 using namespace std;
 
 const string FILE_NAME = "210-final-1-SP26.txt";
+const int MIN1 = 5, MIN2 = 9, MAX1 = 8, MAX2 = 12;
 
 void print_airports_in_range(const map<string, int>&, int, int);
 
@@ -55,13 +56,17 @@ int main() {
         cout << pair.first << " " << pair.second << endl;
     }
 
+    //Milestone 3 code using print_airports_in_range() function
+    print_airports_in_range(airports, MIN1, MAX1);
+    print_airports_in_range(airports, MIN2, MAX2);
 
     return 0;
 }
 
 void print_airports_in_range(const map<string, int> &map, int min, int max) {
+    cout << "\nAirports with traffic in range [" << min << ", " << max << "]:" << endl;
     for (const auto &pair : map) {
         if (pair.second >= min && pair.second <= max)
-            cout << 
+            cout << pair.first << " " << pair.second << endl;
     }
 }

@@ -49,7 +49,7 @@ int main() {
     }
 
     cout << "\nBusiest airport(s) with count " << tracker << ":" << endl;
-    for (const auto &pair : airports) {
+    for (const auto &pair : busiest_airports) {
         cout << pair.first << " " << pair.second << endl;
     }
 }

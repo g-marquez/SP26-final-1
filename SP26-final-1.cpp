@@ -60,7 +60,7 @@ int main() {
     print_airports_in_range(airports, MIN1, MAX1);
     print_airports_in_range(airports, MIN2, MAX2);
 
-    return 0;
+    return 0; 
 }
 
 void print_airports_in_range(const map<string, int> &map, int min, int max) {
